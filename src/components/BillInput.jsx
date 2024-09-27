@@ -1,22 +1,29 @@
-import SelectionPut from "./SelectionPut.jsx";
-import { useState } from "react";
-
-const BillInput = () => {
-  const [percentage1, setPercentage1] = useState(0);
-  const [percentage2, setPercentage2] = useState(0);
-
+// eslint-disable-next-line react/prop-types
+const BillInput = ({ bill, onPrice, per, onPer, per2, onPer2 }) => {
   return (
     <div className="bill-content">
       <h3>How Much Your Bill :</h3>
-      <input type="text" placeholder="Enter total bill price " />
+      <input
+        type="text"
+        placeholder="Enter total bill price "
+        value={bill}
+        onChange={(e) => onPrice(e.target.value)}
+      />
+      <h3> How much Rating for service ? </h3>
+      <select value={per} onChange={(e) => Number(onPer(e.target.value))}>
+        <option value={0}> Its Okay 😕</option>
+        <option value={25}> Good 🙂</option>
+        <option value={50}> Very Good 😃</option>
+        <option value={75}> Excelente 😍</option>
+      </select>
 
-      <SelectionPut percentage={percentage1} onSelect={setPercentage1}>
-        How much Rating for service ?{/* children props in SelectionPut  */}
-      </SelectionPut>
-
-      <SelectionPut percentage={percentage2} onSelect={setPercentage2}>
-        How muchyour friends Rating for service ?
-      </SelectionPut>
+      <h3>How muchyour friends Rating for service ? </h3>
+      <select value={per2} onChange={(e) => Number(onPer2(e.target.value))}>
+        <option value={0}> Its Okay 😕</option>
+        <option value={25}> Good 🙂</option>
+        <option value={50}> Very Good 😃</option>
+        <option value={75}> Excelente 😍</option>
+      </select>
     </div>
   );
 };

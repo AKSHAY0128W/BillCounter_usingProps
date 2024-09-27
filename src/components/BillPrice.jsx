@@ -1,8 +1,13 @@
-const BillPrice = () => {
+// eslint-disable-next-line react/prop-types
+const BillPrice = ({ bill, totalTip }) => {
   return (
     <div className="bill-price">
       <h2>
-        Your Total is : <span>₨. 12000</span>{" "}
+        Your Total Tip is :{" "}
+        <span>
+          {" "}
+          {bill} and your tip is {totalTip} {}
+        </span>
       </h2>
     </div>
   );
