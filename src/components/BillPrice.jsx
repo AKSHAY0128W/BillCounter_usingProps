@@ -3,10 +3,10 @@ const BillPrice = ({ bill, totalTip }) => {
   return (
     <div className="bill-price">
       <h2>
-        Your Total Tip is :{" "}
+        Your Normal Price is :{" "}
         <span>
           {" "}
-          {bill} and your tip is {totalTip} {}
+          {bill} and your Discount is {totalTip} {}
         </span>
       </h2>
     </div>

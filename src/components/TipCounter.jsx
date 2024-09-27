@@ -9,7 +9,13 @@ const TipCounter = () => {
   const [percentage2, setPercentage2] = useState(0); // Initialize percentage2 as a number
 
   // Calculate total tip based on the bill and average of percentages
-  const totalTip = bill * (((percentage1 + percentage2) % 2) % 100);
+  const totalTip = bill - (((percentage1 + percentage2) % 2) % 100);
+
+  const onReset = () => {
+    setBill(0);
+    setPercentage1(0);
+    setPercentage2(0);
+  };
 
   return (
     <div className="bill-list">
@@ -26,14 +32,7 @@ const TipCounter = () => {
         />
         <BillPrice totalTip={totalTip} bill={bill} />{" "}
         {/* Format totalTip to two decimal places */}
-        <ResetBtn
-          onReset={() => {
-            setBill(0);
-            setPercentage1(0);
-            setPercentage2(0);
-          }}
-        />{" "}
-        {/* Reset functionality */}
+        <ResetBtn onReset={onReset} /> {/* Reset functionality */}
       </div>
     </div>
   );

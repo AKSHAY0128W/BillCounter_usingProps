@@ -2,7 +2,7 @@
 const ResetBtn = ({ onReset }) => {
   return (
     <div className="reset">
-      <button onClick={() => onReset}>Reset</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 };
