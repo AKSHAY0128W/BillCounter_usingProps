@@ -4,11 +4,9 @@ const BillPrice = ({ bill, totalTip }) => {
   return (
     <div className="bill-price">
       <h2>
-        Your Normal Price is :{" "}
-        <span>
-          {" "}
-          {bill} and your final price is {total} {}
-        </span>
+        Your Normal Price is : <span> {bill}</span>
+        <br />
+        Your Discounted price is : <span>{total}</span> {}
       </h2>
     </div>
   );
