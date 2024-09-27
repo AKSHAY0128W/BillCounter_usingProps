@@ -113,21 +113,28 @@ body {
 .reset button {
   padding: 10px 20px;
   border: none;
+  width: 100%;
   border-radius: 10px;
 }
 
 .reset button:hover {
   cursor: pointer;
-  background-color: rgb(229, 227, 227);
+  background-color: #f04e0e;
 }
 
 @media (max-width: 440px) {
+  .bill-list {
+    border: none;
+  }
   .bill-list h1 {
     width: 100%;
   }
   .bill {
     width: 100%;
     padding: 10px 20px;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
   }
 }
