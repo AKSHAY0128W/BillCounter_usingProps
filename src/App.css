@@ -21,13 +21,12 @@ body {
 }
 
 .bill-list {
-  border: 11px solid black;
   height: auto;
 }
 
 .bill-list h1 {
   text-align: center;
-  margin: 30px 20px;
+  margin: 40px 20px;
   text-transform: uppercase;
   font-size: 3.4rem;
   position: relative;
@@ -55,12 +54,13 @@ body {
 .bill {
   background-color: #fff;
   border: 1px solid #20201f;
-  border-radius: 6px;
+  border-radius: 54px 0px 162px 0px;
   color: #20201f;
+  overflow: hidden;
   width: 50%;
   padding: 20px;
   margin: 10px auto;
-  height: 80%;
+  height: 90%;
 }
 
 .bill h2 {

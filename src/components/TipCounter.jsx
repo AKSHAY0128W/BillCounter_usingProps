@@ -15,9 +15,12 @@ const TipCounter = () => {
   const totalTip = bill - totaldis;
 
   const onReset = () => {
-    setBill(0);
-    setPercentage1(0);
-    setPercentage2(0);
+    const confirm = window.confirm("Do you want to reset your bill");
+    if (confirm) {
+      setBill(0);
+      setPercentage1(0);
+      setPercentage2(0);
+    }
   };
 
   return (
@@ -33,9 +36,15 @@ const TipCounter = () => {
           onPrice={setBill}
           bill={bill}
         />
-        <BillPrice totalTip={totalTip} bill={bill} />{" "}
-        {/* Format totalTip to two decimal places */}
-        <ResetBtn onReset={onReset} /> {/* Reset functionality */}
+        {bill > 0 && (
+          <>
+            {" "}
+            <BillPrice totalTip={totalTip} bill={bill} />{" "}
+            {/* Format totalTip to two decimal places */}
+            <ResetBtn onReset={onReset} />
+          </>
+        )}
+        {/* Reset functionality */}
       </div>
     </div>
   );
