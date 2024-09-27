@@ -12,17 +12,17 @@ const BillInput = ({ bill, onPrice, per, onPer, per2, onPer2 }) => {
       <h3> How much Rating for service ? </h3>
       <select value={per} onChange={(e) => Number(onPer(e.target.value))}>
         <option value={0}> Its Okay 😕</option>
-        <option value={25}> Good 🙂</option>
-        <option value={50}> Very Good 😃</option>
-        <option value={75}> Excelente 😍</option>
+        <option value={5}> Good 🙂</option>
+        <option value={10}> Very Good 😃</option>
+        <option value={15}> Excelente 😍</option>
       </select>
 
       <h3>How muchyour friends Rating for service ? </h3>
       <select value={per2} onChange={(e) => Number(onPer2(e.target.value))}>
         <option value={0}> Its Okay 😕</option>
-        <option value={25}> Good 🙂</option>
-        <option value={50}> Very Good 😃</option>
-        <option value={75}> Excelente 😍</option>
+        <option value={5}> Good 🙂</option>
+        <option value={10}> Very Good 😃</option>
+        <option value={15}> Excelente 😍</option>
       </select>
     </div>
   );

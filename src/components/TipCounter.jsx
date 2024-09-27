@@ -9,7 +9,7 @@ const TipCounter = () => {
   const [percentage2, setPercentage2] = useState(0); // Initialize percentage2 as a number
 
   // Calculate total tip based on the bill and average of percentages
-  const totalTip = bill - (((percentage1 + percentage2) % 2) % 100);
+  const totalTip = bill - (percentage1 + percentage2) / 2 / 100;
 
   const onReset = () => {
     setBill(0);
