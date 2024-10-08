@@ -18,6 +18,8 @@ const BillInput = ({ bill, onPrice, per, onPer, per2, onPer2 }) => {
 
         {/* avu na hoi rekha */}
 
+        {/* ye bhi koi tarika he */}
+
       </select>
 
       <h3>How muchyour friends Rating for service ? </h3>
