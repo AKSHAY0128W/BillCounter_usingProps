@@ -15,6 +15,9 @@ const BillInput = ({ bill, onPrice, per, onPer, per2, onPer2 }) => {
         <option value={5}>⭐️⭐️⭐️</option>
         <option value={6}> ⭐️⭐️⭐️⭐️</option>
         <option value={7}> ⭐️⭐️⭐️⭐️⭐️</option>
+
+        {/* avu na hoi rekha */}
+
       </select>
 
       <h3>How muchyour friends Rating for service ? </h3>
